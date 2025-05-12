@@ -1,0 +1,20 @@
+{
+  "name": "biblioteca-virtual-2-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fastify": "^5.3.2",
+    "pg": "^8.16.0"
+  }
+}
