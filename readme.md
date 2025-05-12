@@ -1,0 +1,2 @@
+# Biblioteca virtual
+Backend da minha segunda versão da [biblioteca virtual](https://github.com/williamsdavid5/Biblioteca-virtual-2-frontend), dessa vez criado em Node usando um banco de dados PostgreSQL hospedado em [Neon.tech](https://neon.tech/).

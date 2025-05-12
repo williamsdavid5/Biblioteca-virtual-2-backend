@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@neondatabase/serverless": "^1.0.0",
+    "biblioteca-virtual-2-backend": "file:",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "fastify": "^5.3.2",
