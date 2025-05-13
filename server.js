@@ -1,14 +1,13 @@
 import fastify from 'fastify'
+import cors from '@fastify/cors'
 import { Database } from './database.js'
-import express from 'express';
-import cors from 'cors';
-
-const app = express();
-app.use(cors({
-    origin: 'http://localhost:5173'
-}));
 
 const server = fastify()
+
+await server.register(cors, {
+    origin: '*'
+})
+
 const database = new Database()
 
 server.post('/livros', async (req, res) => {
@@ -42,6 +41,8 @@ server.put('/livros/:id', async (req, res) => {
         descricao,
         disponivel
     })
+
+    return res.status(204).send()
 })
 
 server.delete('/livros/:id', async (req, res) => {
@@ -50,8 +51,6 @@ server.delete('/livros/:id', async (req, res) => {
 
     return res.status(204).send()
 })
-
-
 
 server.listen({
     port: process.env.PORT ?? 3000,
