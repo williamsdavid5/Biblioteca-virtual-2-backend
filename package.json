@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fastify/cors": "^11.0.1",
     "@neondatabase/serverless": "^1.0.0",
     "biblioteca-virtual-2-backend": "file:",
     "cors": "^2.8.5",
