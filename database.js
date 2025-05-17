@@ -22,8 +22,17 @@ export class Database {
     async update(id, livro) {
         const { nome, autor, ano_publicacao, descricao, disponivel } = livro
 
-        await sql`update livros set nome = ${nome}, autor = ${autor}, ano_publicacao = ${ano_publicacao}, descricao = ${descricao}, disponivel = ${disponivel}`
+        await sql`
+        update livros
+        set nome = ${nome},
+            autor = ${autor},
+            ano_publicacao = ${ano_publicacao},
+            descricao = ${descricao},
+            disponivel = ${disponivel}
+        where id = ${id}
+    `
     }
+
 
     async delete(id) {
         await sql`delete from livros where id = ${id}`
