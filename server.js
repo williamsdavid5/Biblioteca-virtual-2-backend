@@ -5,7 +5,8 @@ import { Database } from './database.js'
 const server = fastify()
 
 await server.register(cors, {
-    origin: '*'
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']
 })
 
 const database = new Database()
